@@ -6,10 +6,7 @@ import com.jumia.task.core.model.ListPhoneNumbersResponse;
 import com.jumia.task.core.model.State;
 import com.jumia.task.shell.service.PhoneNumberService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
@@ -19,6 +16,7 @@ public class PhoneNumberController {
     @Autowired
     private PhoneNumberService phoneNumberService;
 
+    @CrossOrigin
     @GetMapping
     ListPhoneNumbersResponse listPhoneNumbers(@RequestParam(required = false) String countryName,
                                               @RequestParam(required = false) State state ) {
