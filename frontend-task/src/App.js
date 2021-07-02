@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Table from "./Table";
 
-const phoneNumbersUrl = "/api/v1/phoneNumbers";
+const phoneNumbersUrl = "http://localhost:8080/api/v1/phoneNumbers";
 
 function App() {
   const [phoneNumbers, setPhoneNumbers] = useState({});
@@ -22,9 +22,9 @@ function App() {
     setPhoneNumbers(null)
     const response = await axios.get(phoneNumbersUrl, 
       { params: {
-        countryName: countryName != "" ? countryName : null,
+        countryName: countryName !== "" ? countryName : null,
         state: state
-      }
+      },  crossdomain: true
     });
     setPhoneNumbers(response.data.phoneNumbersList);
   };
