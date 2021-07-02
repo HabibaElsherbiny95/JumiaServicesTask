@@ -24,8 +24,8 @@ function App() {
       { params: {
         countryName: countryName !== "" ? countryName : null,
         state: state
-      }
-    });
+        }
+      });
     setPhoneNumbers(response.data.phoneNumbersList);
   };
 
