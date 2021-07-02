@@ -4,7 +4,7 @@
 1. Go to directory backend-task 
 2. Run the following commands: 
    - docker build -t jumia-backend-task .
-   - docker run -p 8088:8088 jumia-backend-task
+   - docker run -p 8080:8080 jumia-backend-task
 
 **To build & run a docker image for the frontend:**
 1. Go to directory frontend-task
