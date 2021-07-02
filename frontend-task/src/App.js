@@ -24,7 +24,7 @@ function App() {
       { params: {
         countryName: countryName !== "" ? countryName : null,
         state: state
-      },  crossdomain: true
+      }
     });
     setPhoneNumbers(response.data.phoneNumbersList);
   };
